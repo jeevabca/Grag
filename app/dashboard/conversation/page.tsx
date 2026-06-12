@@ -620,29 +620,25 @@ const handleSaveEdit = (index: number) => {
                         
                         {/* Inline Editing Mode checking */}
                         {editingMessageIndex === i ? (
-                        <div className="flex flex-col gap-3 my-2 w-full animate-in fade-in zoom-in-95 duration-200">
-                          <div className="relative group">
-                            <Input.TextArea
-                              value={tempEditText}
-                              onChange={(e) => setTempEditText(e.target.value)}
-                              autoSize={{ minRows: 2, maxRows: 6 }}
-                              className="!bg-[#1e293b] !text-white !border-blue-500/50 focus:!border-blue-400 !shadow-lg rounded-xl p-3 placeholder-white/20 transition-all"
-                              placeholder="Edit your query..."
-                            />
-                            <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-blue-500 rounded-full animate-ping" />
-                          </div>
+                        <div className="flex flex-col gap-3 my-2 w-full animate-in fade-in duration-200">
+                          <Input.TextArea
+                            value={tempEditText}
+                            onChange={(e) => setTempEditText(e.target.value)}
+                            autoSize={{ minRows: 2, maxRows: 6 }}
+                            className="!bg-[var(--app-surface)] !text-[var(--app-text)] !border-[var(--app-border)] focus:!border-[#285d91] focus:!ring-1 focus:!ring-[#285d91] rounded-2xl p-4 shadow-sm transition-all resize-none placeholder-[var(--app-text-muted)]"
+                            placeholder="Edit your message..."
+                          />
                           
                           <div className="flex gap-2 justify-end">
                             <Button 
-                              type="text" 
-                              className="!text-white/60 hover:!text-white hover:!bg-white/5 !px-4 !h-8 rounded-lg font-medium transition-all"
+                              className="rounded-full border border-[var(--app-border)] text-[var(--app-text-soft)] bg-transparent hover:!bg-slate-100/10 hover:!text-[var(--app-text)] px-4 h-9 font-medium transition-all"
                               onClick={() => setEditingMessageIndex(null)}
                             >
                               Cancel
                             </Button>
                             <Button 
                               type="primary" 
-                              className="!bg-blue-600 hover:!bg-blue-500 !border-0 !px-6 !h-8 rounded-lg font-bold shadow-lg shadow-blue-900/20 transition-all"
+                              className="rounded-full !bg-[#10a37f] hover:!bg-[#0d8567] !border-none text-white px-5 h-9 font-semibold shadow-sm transition-all"
                               onClick={() => handleSaveEdit(i)}
                             >
                               Save & Send

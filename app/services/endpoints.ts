@@ -36,30 +36,30 @@ export const endpoints = {
     method: methods.post,
     // withCredentials: true,
   },
-  GETAGENTLIST:{
-    url:`/agents`,
-    method:methods.get,
+  GETAGENTLIST: {
+    url: `/agents`,
+    method: methods.get,
   },
-  CREATEAGENT:{
-    url:"/agents",
-    method:methods.post
+  CREATEAGENT: {
+    url: "/agents",
+    method: methods.post
   },
-  UPDATEAGENT:{
-    url:"/agents",
-    method:methods.patch
+  UPDATEAGENT: {
+    url: "/agents",
+    method: methods.patch
   },
-  DELETEAGENT:{
-    url:"/agents",
-    method:methods.delete
+  DELETEAGENT: {
+    url: "/agents",
+    method: methods.delete
   },
-  KNOWLEDGEBASE:{
-    url:"/agents",
-    method:methods.post
+  KNOWLEDGEBASE: {
+    url: "/agents",
+    method: methods.post
   },
 
-  GRAPHVIEW:{
-    url:"/graphs/agent",
-    method:methods.get
+  GRAPHVIEW: {
+    url: "/graphs/agent",
+    method: methods.get
   },
   ANALYTICS_DASHBOARD: {
     url: "/analytics/dashboard",
@@ -69,19 +69,19 @@ export const endpoints = {
     url: "/agents/by-user",
     method: methods.get,
   },
-  GET_LIST :{
-   url:"/knowledge-bases",
-   method:methods.get
+  GET_LIST: {
+    url: "/knowledge-bases",
+    method: methods.get
   },
-  GET_LISTS :{
-   url:"/knowledge-bases",
-   method:methods.post
+  GET_LISTS: {
+    url: "/knowledge-bases",
+    method: methods.post
   },
-  DISCONNECT :{
-    url:"/knowledge-bases/",
-    method:methods.delete
+  DISCONNECT: {
+    url: "/knowledge-bases/agent/",
+    method: methods.delete
   }
-  
+
 
 } as const;
 
